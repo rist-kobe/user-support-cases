@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>「富岳」利用支援事例集ビューア</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <h1>「富岳」を中核とするHPCIの利用支援事例集</h1>
+  <p class="subtitle">事例JSONをブラウザ上で読みやすく閲覧・検索できるビューアです。</p>
+</header>
+
+<main id="app">
+  <section id="list-view">
+    <div class="controls">
+      <div class="search-row">
+        <input type="search" id="keyword-input" placeholder="キーワードで検索（分類・課題・支援内容・支援結果・本文）" aria-label="キーワード検索">
+      </div>
+      <div class="category-tabs" id="category-tabs" role="tablist" aria-label="カテゴリ切り替え">
+        <button type="button" class="tab active" data-category="all">すべて</button>
+        <button type="button" class="tab" data-category="performance_analysis">性能分析</button>
+        <button type="button" class="tab" data-category="performance_improvement">性能改善</button>
+        <button type="button" class="tab" data-category="porting">移植</button>
+      </div>
+      <div class="tag-filters">
+        <div class="tag-group">
+          <h3>支援タグ</h3>
+          <div id="support-tag-list" class="tag-list"></div>
+        </div>
+        <div class="tag-group">
+          <h3>技術タグ</h3>
+          <div id="technical-tag-list" class="tag-list"></div>
+        </div>
+      </div>
+      <div class="result-summary" id="result-summary"></div>
+    </div>
+
+    <div id="case-list" class="case-list"></div>
+  </section>
+</main>
+
+<div id="modal-overlay" class="modal-overlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button type="button" id="modal-close" class="modal-close" aria-label="閉じる">×</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>データは <a href="data/cases.json">docs/data/cases.json</a> から読み込まれています。生成方法は
+    <a href="https://github.com/rist-kobe/user-support-cases#github-pages-%E3%83%93%E3%83%A5%E3%83%BC%E3%82%A2">README</a>
+    を参照してください。</p>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -55,7 +55,47 @@ tools/
 ├── json2md.py
 ├── readme_generator.py
 └── viewer.py
+
+docs/
+├── index.html
+├── assets/
+│   ├── style.css
+│   └── app.js
+└── data/
+    └── cases.json
+
+scripts/
+└── build_pages_data.py
 ```
+
+---
+
+## GitHub Pages ビューア
+
+`cases/` 配下のJSONをブラウザ上でドキュメントとして閲覧できる、検索・一覧機能付きの静的サイトを `docs/` に用意しています。
+
+- 公開URL: https://rist-kobe.github.io/user-support-cases/
+- 機能: カテゴリ別一覧・キーワード全文検索・タグ絞り込み（支援タグ / 技術タグ）・詳細表示（`?case=` クエリパラメータまたはモーダル）
+
+### GitHub Pages の有効化手順
+
+GitHub Pages自体の有効化はリポジトリ設定のため、本PRの中では行えません。リポジトリの管理者が以下の手順で有効化してください。
+
+1. GitHubリポジトリの **Settings** タブを開く
+2. 左メニューの **Pages** を選択
+3. **Build and deployment** の **Source** を `Deploy from a branch` に設定
+4. **Branch** を `main` 、フォルダを `/docs` に設定して **Save**
+5. 数分後、上記の公開URLでサイトが閲覧可能になります
+
+### `docs/data/cases.json` の再生成方法
+
+GitHub Pagesは `docs/` 配下のファイルしか配信できないため、`cases/**/*.json` を1つのJSONファイルに集約したものをビルド成果物として `docs/data/cases.json` に配置しています。`cases/` 配下のJSONを追加・変更・削除した場合は、以下のコマンドで再生成してください。
+
+```bash
+python scripts/build_pages_data.py
+```
+
+`main` ブランチへの push で `cases/**/*.json` に変更があった場合、GitHub Actionsワークフロー（`.github/workflows/pages-data.yml`）が自動的に `docs/data/cases.json` を再生成してコミットします。
 
 ---
 
