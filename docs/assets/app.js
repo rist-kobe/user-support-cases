@@ -12,6 +12,7 @@
     technicalTags: new Set(),
     allSupportTags: [],
     allTechnicalTags: [],
+    lastFocusedElement: null,
   };
 
   var elements = {};
@@ -226,6 +227,13 @@
   }
 
   function showModal() {
+    var activeElement = document.activeElement;
+    if (activeElement && activeElement !== document.body && activeElement !== document.documentElement) {
+      state.lastFocusedElement = activeElement;
+    } else {
+      state.lastFocusedElement = null;
+    }
+
     elements.modalOverlay.hidden = false;
     if (elements.modalClose) {
       elements.modalClose.focus();
@@ -242,6 +250,14 @@
 
   function closeDetail() {
     elements.modalOverlay.hidden = true;
+    if (
+      state.lastFocusedElement &&
+      typeof state.lastFocusedElement.focus === "function" &&
+      document.contains(state.lastFocusedElement)
+    ) {
+      state.lastFocusedElement.focus();
+    }
+    state.lastFocusedElement = null;
     var params = new URLSearchParams(window.location.search);
     params.delete("case");
     var query = params.toString();
