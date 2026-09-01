@@ -73,7 +73,7 @@ def main() -> None:
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT_PATH.open("w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
+        json.dump(payload, f, ensure_ascii=False, indent=2, sort_keys=True)
         f.write("\n")
 
     print(f"Wrote {len(cases)} cases to {OUTPUT_PATH.relative_to(REPO_ROOT)}")

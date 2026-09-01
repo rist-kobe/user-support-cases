@@ -171,13 +171,13 @@ a {
   font-size: 1rem;
 }
 
-.case-card .case-tags {
+.case-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
 }
 
-.case-card .case-tags span {
+.case-tags span {
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: 999px;

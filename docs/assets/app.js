@@ -225,9 +225,16 @@
     elements.modalBody.innerHTML = html;
   }
 
+  function showModal() {
+    elements.modalOverlay.hidden = false;
+    if (elements.modalClose) {
+      elements.modalClose.focus();
+    }
+  }
+
   function openDetail(caseItem) {
     renderDetail(caseItem);
-    elements.modalOverlay.hidden = false;
+    showModal();
     var params = new URLSearchParams(window.location.search);
     params.set("case", uid(caseItem));
     history.replaceState(null, "", "?" + params.toString());
@@ -252,7 +259,7 @@
     });
     if (found) {
       renderDetail(found);
-      elements.modalOverlay.hidden = false;
+      showModal();
     }
   }
 
