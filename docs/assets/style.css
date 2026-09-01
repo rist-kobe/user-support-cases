@@ -175,7 +175,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
-  font-size: 0;
 }
 
 .case-tags span {

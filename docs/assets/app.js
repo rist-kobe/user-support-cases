@@ -188,7 +188,7 @@
       .map(function (tag) {
         return "<span>" + escapeHtml(tag) + "</span>";
       })
-      .join(" ");
+      .join("");
     return (
       "<section><h3>" + escapeHtml(label) + '</h3><p class="case-tags">' + content + "</p></section>"
     );
