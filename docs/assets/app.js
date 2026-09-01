@@ -116,7 +116,7 @@
 
     card.innerHTML =
       '<div class="case-id">' +
-      escapeHtml(caseItem.case_type_name || caseItem.case_type) +
+      escapeHtml(state.caseTypeNames[caseItem.case_type] || caseItem.case_type_name || caseItem.case_type) +
       " / No." +
       escapeHtml(caseItem.case_id) +
       "</div>" +
