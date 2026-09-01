@@ -1,0 +1,20 @@
+{
+  "case_id": 5,
+  "case_type": "performance_analysis",
+  "problem": "利用者コードの「京」上で性能分析した結果を知りたい。また、性能が妥当かどうかの評価について\nソフトウェア評価",
+  "classification": "性能診断",
+  "support_tags": [
+    "ソフトウェア評価"
+  ],
+  "technical_tags": [
+    "Communication",
+    "PerformanceAnalysis"
+  ],
+  "support_content": "計算の主要部分を抽出し、性能分析ツールによる演算と通信の性能解析を実施し、得られた性能情報を報告。",
+  "support_result": "演算部分の主要部が行列行列積（DGEMM）で、実行効率が70%と高く、妥当と判断。通信時間を含めた全体でも、実行効率が30%と高い。単体性能としては良好で、実行性能として妥当なことを確認。",
+  "document": "【課題】\n利用者コードの「京」上で性能分析した結果を知りたい。また、性能が妥当かどうかの評価について\nソフトウェア評価\n\n【分類】\n性能診断\n\n【支援内容】\n計算の主要部分を抽出し、性能分析ツールによる演算と通信の性能解析を実施し、得られた性能情報を報告。\n\n【支援結果】\n演算部分の主要部が行列行列積（DGEMM）で、実行効率が70%と高く、妥当と判断。通信時間を含めた全体でも、実行効率が30%と高い。単体性能としては良好で、実行性能として妥当なことを確認。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

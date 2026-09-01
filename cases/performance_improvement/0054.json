@@ -1,0 +1,23 @@
+{
+  "case_id": 54,
+  "case_type": "performance_improvement",
+  "problem": "Advance/FrontFlow/MPにおいて、\n1)性能分析ツールの使い方を知りたい\n2)並列性能の向上策についてのご相談\n・並列性能を阻害している要因を分析する方法を知りたい\n・インバランスをわかりやすく分析する方法を知りたい\n・現状の通信方法に改善の余地があるか知りたい\nコード構造の改善",
+  "classification": "プログラム調査\n性能改善",
+  "support_tags": [
+    "コード構造の改善"
+  ],
+  "technical_tags": [
+    "CFD",
+    "Communication",
+    "LoadBalance",
+    "MPI",
+    "PerformanceAnalysis"
+  ],
+  "support_content": "最も時間コストの大きいICCGソルバについて、分析および高速化の検討\n・ fipp/fappによる性能分析、および分析方法の説明\n・ 高速化検討\n(1)翻訳指示行によるSIMD化の促進\n(2)複数のMPI_Allreduceをまとめ、呼び出し回数の削減\n(3)冗長なSEND_RECVの削減",
+  "support_result": "ICCGソルバ部分（全体の70～80％）の最適化により、11.1秒から9.4秒への時間短縮（約10%の短縮）となった。",
+  "document": "【課題】\nAdvance/FrontFlow/MPにおいて、\n1)性能分析ツールの使い方を知りたい\n2)並列性能の向上策についてのご相談\n・並列性能を阻害している要因を分析する方法を知りたい\n・インバランスをわかりやすく分析する方法を知りたい\n・現状の通信方法に改善の余地があるか知りたい\nコード構造の改善\n\n【分類】\nプログラム調査\n性能改善\n\n【支援内容】\n最も時間コストの大きいICCGソルバについて、分析および高速化の検討\n・ fipp/fappによる性能分析、および分析方法の説明\n・ 高速化検討\n(1)翻訳指示行によるSIMD化の促進\n(2)複数のMPI_Allreduceをまとめ、呼び出し回数の削減\n(3)冗長なSEND_RECVの削減\n\n【支援結果】\nICCGソルバ部分（全体の70～80％）の最適化により、11.1秒から9.4秒への時間短縮（約10%の短縮）となった。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

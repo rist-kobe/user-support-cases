@@ -1,0 +1,19 @@
+{
+  "case_id": 33,
+  "case_type": "performance_analysis",
+  "problem": "ABINIT-MP Rev.10での単体性能評価\nソフトウェア評価",
+  "classification": "性能分析",
+  "support_tags": [
+    "ソフトウェア評価"
+  ],
+  "technical_tags": [
+    "PerformanceAnalysis"
+  ],
+  "support_content": "基本プロファイラを用いて、高コストルーチンを洗い出し、それぞれについて改善の余地があるかどうかの検討を行った。",
+  "support_result": "いくつかのルーチンについては、改善の余地を見出すことができ、依頼者と情報共有した。",
+  "document": "【課題】\nABINIT-MP Rev.10での単体性能評価\nソフトウェア評価\n\n【分類】\n性能分析\n\n【支援内容】\n基本プロファイラを用いて、高コストルーチンを洗い出し、それぞれについて改善の余地があるかどうかの検討を行った。\n\n【支援結果】\nいくつかのルーチンについては、改善の余地を見出すことができ、依頼者と情報共有した。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": 92,
+  "case_type": "performance_improvement",
+  "problem": "ユーザコードのスケーラビリティ改善に向けた調査\nスレッド並列・通信最適化",
+  "classification": "性能改善",
+  "support_tags": [
+    "スレッド並列・通信最適化"
+  ],
+  "technical_tags": [
+    "Communication",
+    "MPI",
+    "OpenMP",
+    "Scalability"
+  ],
+  "support_content": "・ノード形状変更による実行時間の影響度調査\n・SIMDおよびソフトウェアパイプラインが適用されていないループの調査\n・MPI通信、スケーラビリティの調査",
+  "support_result": "ノード形状の変更により、16,384プロセス（512ノード）の場合、プログラム全体で76.91秒（1次元指定で576:4x3x48をallocate）が、20.63秒（ジョブスクリプト内でnode=8x9x8、shape=8x8x8を指定）に短縮（3.7倍高速化）",
+  "document": "【課題】\nユーザコードのスケーラビリティ改善に向けた調査\nスレッド並列・通信最適化\n\n【分類】\n性能改善\n\n【支援内容】\n・ノード形状変更による実行時間の影響度調査\n・SIMDおよびソフトウェアパイプラインが適用されていないループの調査\n・MPI通信、スケーラビリティの調査\n\n【支援結果】\nノード形状の変更により、16,384プロセス（512ノード）の場合、プログラム全体で76.91秒（1次元指定で576:4x3x48をallocate）が、20.63秒（ジョブスクリプト内でnode=8x9x8、shape=8x8x8を指定）に短縮（3.7倍高速化）",
+  "speedup": 3.7,
+  "performance_improvement_percent": null,
+  "max_nodes": 512,
+  "max_threads": null
+}

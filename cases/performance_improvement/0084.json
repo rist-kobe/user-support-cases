@@ -1,0 +1,20 @@
+{
+  "case_id": 84,
+  "case_type": "performance_improvement",
+  "problem": "データ規模が大きくなるにしたがい通信処理コストが増大し、並列処理の効率が阻害されている\nライブラリ活用",
+  "classification": "性能改善",
+  "support_tags": [
+    "ライブラリ活用"
+  ],
+  "technical_tags": [
+    "Communication",
+    "LoadBalance"
+  ],
+  "support_content": "調査の結果、計算時間が伸びる主な要因は、通信負荷の増大ではなく、処理のインバランスであることが判明。",
+  "support_result": "数値計算ライブラリの使用方法改善により、3.6倍に高速化。",
+  "document": "【課題】\nデータ規模が大きくなるにしたがい通信処理コストが増大し、並列処理の効率が阻害されている\nライブラリ活用\n\n【分類】\n性能改善\n\n【支援内容】\n調査の結果、計算時間が伸びる主な要因は、通信負荷の増大ではなく、処理のインバランスであることが判明。\n\n【支援結果】\n数値計算ライブラリの使用方法改善により、3.6倍に高速化。",
+  "speedup": 3.6,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

@@ -1,0 +1,19 @@
+{
+  "case_id": 31,
+  "case_type": "porting",
+  "problem": "「富岳」上で実施するVASPによるAIMD計算について\n移植・環境適応",
+  "classification": "実行支援",
+  "support_tags": [
+    "移植・環境適応"
+  ],
+  "technical_tags": [
+    "Porting"
+  ],
+  "support_content": "・先行研究の文献による調査\n・スクリプトの書き方については、質問ペースで対応",
+  "support_result": "・計算に必要な機能のVASPの実装状況や各種MDシミュレーションを行う際に考慮すべき点および計算手順について説明した。\n・過去の支援事例などで実績があるスクリプトの提供を行った。",
+  "document": "【課題】\n「富岳」上で実施するVASPによるAIMD計算について\n移植・環境適応\n\n【分類】\n実行支援\n\n【支援内容】\n・先行研究の文献による調査\n・スクリプトの書き方については、質問ペースで対応\n\n【支援結果】\n・計算に必要な機能のVASPの実装状況や各種MDシミュレーションを行う際に考慮すべき点および計算手順について説明した。\n・過去の支援事例などで実績があるスクリプトの提供を行った。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

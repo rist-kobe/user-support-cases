@@ -1,0 +1,21 @@
+{
+  "case_id": 58,
+  "case_type": "performance_improvement",
+  "problem": "以下の支援をお願いしたい。\n1)固有値ライブラリをLAPACKに置き換え\n2)大規模データによるプログラムの性能評価\nライブラリ活用",
+  "classification": "性能改善",
+  "support_tags": [
+    "ライブラリ活用"
+  ],
+  "technical_tags": [
+    "Compiler",
+    "OpenMP",
+    "PerformanceAnalysis"
+  ],
+  "support_content": "・固有値ソルバをMillerからLAPACKに変更した。\n・基本プロファイラ（fipp）を用いて、ホットスポットを3ルーチン特定し、OpenMPによる並列化及びコンパイラによる自動並列化の実施。",
+  "support_result": "・固有値ライブラリの変更により、性能はやや劣化したが、可搬性が向上した。\n・性能情報\nオリジナル（固有値ライブラリ：Miller）　95.79秒(1スレッド実行)→21.24秒(8スレッド実行)\n変更後（固有値ライブラリ：LAPACK） 109.19秒(1スレッド実行)→23.10秒(8スレッド実行)",
+  "document": "【課題】\n以下の支援をお願いしたい。\n1)固有値ライブラリをLAPACKに置き換え\n2)大規模データによるプログラムの性能評価\nライブラリ活用\n\n【分類】\n性能改善\n\n【支援内容】\n・固有値ソルバをMillerからLAPACKに変更した。\n・基本プロファイラ（fipp）を用いて、ホットスポットを3ルーチン特定し、OpenMPによる並列化及びコンパイラによる自動並列化の実施。\n\n【支援結果】\n・固有値ライブラリの変更により、性能はやや劣化したが、可搬性が向上した。\n・性能情報\nオリジナル（固有値ライブラリ：Miller）　95.79秒(1スレッド実行)→21.24秒(8スレッド実行)\n変更後（固有値ライブラリ：LAPACK） 109.19秒(1スレッド実行)→23.10秒(8スレッド実行)",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": 8
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": 40,
+  "case_type": "performance_analysis",
+  "problem": "・機械学習ポテンシャルを使用してMD計算を行う独自プログラムを「富岳」上でcmakeを用いてインストールする方法について\n・MD計算部分の性能分析\n・ノード数を増やすとファイル出力に時間がかかる原因調査\n移植・環境適応\nI/O・メモリ最適化\nライブラリ活用\nAI・機械学習",
+  "classification": "移植・性能分析",
+  "support_tags": [
+    "移植・環境適応",
+    "I/O・メモリ最適化",
+    "ライブラリ活用",
+    "AI・機械学習"
+  ],
+  "technical_tags": [
+    "IO",
+    "MPI",
+    "Memory",
+    "PerformanceAnalysis",
+    "Porting"
+  ],
+  "support_content": "移植時に問題となった、pytorchとfilesystem関数は、それぞれ、spack版pytorchの利用とリンク時に適切なライブラリ追加で解消。",
+  "support_result": "性能分析については、ブーストecoモードは効果があるが、llio_transferは効果が無いこと、またMPI-IOの試行で、改善の余地があることを示した。",
+  "document": "【課題】\n・機械学習ポテンシャルを使用してMD計算を行う独自プログラムを「富岳」上でcmakeを用いてインストールする方法について\n・MD計算部分の性能分析\n・ノード数を増やすとファイル出力に時間がかかる原因調査\n移植・環境適応\nI/O・メモリ最適化\nライブラリ活用\nAI・機械学習\n\n【分類】\n移植・性能分析\n\n【支援内容】\n移植時に問題となった、pytorchとfilesystem関数は、それぞれ、spack版pytorchの利用とリンク時に適切なライブラリ追加で解消。\n\n【支援結果】\n性能分析については、ブーストecoモードは効果があるが、llio_transferは効果が無いこと、またMPI-IOの試行で、改善の余地があることを示した。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

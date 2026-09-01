@@ -1,0 +1,20 @@
+{
+  "case_id": 81,
+  "case_type": "performance_improvement",
+  "problem": "自作プログラムの高速化\nコード構造の改善",
+  "classification": "性能改善",
+  "support_tags": [
+    "コード構造の改善"
+  ],
+  "technical_tags": [
+    "FFT",
+    "MPI"
+  ],
+  "support_content": "FFT で行うデータ転置をmpi_alltoallで実装している。その際、配列データの詰め替えを何度か実行しているが、詰め替えの回数削減と最適な格納方法を提案した。",
+  "support_result": "FFT部分の計算時間が4%程度改善した。",
+  "document": "【課題】\n自作プログラムの高速化\nコード構造の改善\n\n【分類】\n性能改善\n\n【支援内容】\nFFT で行うデータ転置をmpi_alltoallで実装している。その際、配列データの詰め替えを何度か実行しているが、詰め替えの回数削減と最適な格納方法を提案した。\n\n【支援結果】\nFFT部分の計算時間が4%程度改善した。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

@@ -1,0 +1,19 @@
+{
+  "case_id": 21,
+  "case_type": "porting",
+  "problem": "GAP (Gaussian Approximation Potential)を使用したMDシミュレーションが非常に遅い\n実行支援・動作検証",
+  "classification": "実行支援",
+  "support_tags": [
+    "実行支援・動作検証"
+  ],
+  "technical_tags": [
+    "OpenMP"
+  ],
+  "support_content": "物理コア数以上にスレッド数が割り当てられていた。「富岳」のCPU構成（1ノードあたり48プロセッサコア, 4個のCMG）に合わせたジョブスクリプトを提案した。",
+  "support_result": "修正版ジョブスクリプトにより、メインループの計算時間について修正前に比べて速度が12倍に向上した。",
+  "document": "【課題】\nGAP (Gaussian Approximation Potential)を使用したMDシミュレーションが非常に遅い\n実行支援・動作検証\n\n【分類】\n実行支援\n\n【支援内容】\n物理コア数以上にスレッド数が割り当てられていた。「富岳」のCPU構成（1ノードあたり48プロセッサコア, 4個のCMG）に合わせたジョブスクリプトを提案した。\n\n【支援結果】\n修正版ジョブスクリプトにより、メインループの計算時間について修正前に比べて速度が12倍に向上した。",
+  "speedup": 12.0,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

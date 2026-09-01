@@ -1,0 +1,22 @@
+{
+  "case_id": 19,
+  "case_type": "porting",
+  "problem": "aenet( http://ann.atomistic.net/ ) およびそのエネルギー評価関数を使用したLAMMPS( https://github.com/HidekiMori-CIT/aenet-lammps )の「富岳」での移植と aenetとそのエネルギー評価関数を使用したLAMMPSの「富岳」での実行支援\n移植・環境適応",
+  "classification": "移植支援、実行支援",
+  "support_tags": [
+    "移植・環境適応"
+  ],
+  "technical_tags": [
+    "Communication",
+    "MPI",
+    "OpenMP",
+    "Porting"
+  ],
+  "support_content": "「富岳」上で、aenetとそのエネルギー評価関数を使用したLAMMPSの正常終了を確認し、計算資源を有効に活用するaenetの実行方法を調査した。",
+  "support_result": "aenetはスレッド並列化されてないため、フラットMPIの実行が、実行時間の観点からも、計算資源の有効利用の観点からも優位。さらに、高速型通信モードによりAllreduceの平均実行時間を短くすることができた。",
+  "document": "【課題】\naenet( http://ann.atomistic.net/ ) およびそのエネルギー評価関数を使用したLAMMPS( https://github.com/HidekiMori-CIT/aenet-lammps )の「富岳」での移植と aenetとそのエネルギー評価関数を使用したLAMMPSの「富岳」での実行支援\n移植・環境適応\n\n【分類】\n移植支援、実行支援\n\n【支援内容】\n「富岳」上で、aenetとそのエネルギー評価関数を使用したLAMMPSの正常終了を確認し、計算資源を有効に活用するaenetの実行方法を調査した。\n\n【支援結果】\naenetはスレッド並列化されてないため、フラットMPIの実行が、実行時間の観点からも、計算資源の有効利用の観点からも優位。さらに、高速型通信モードによりAllreduceの平均実行時間を短くすることができた。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

@@ -1,0 +1,23 @@
+{
+  "case_id": 52,
+  "case_type": "performance_improvement",
+  "problem": "OpenFOAM（RapidCFD）性能の向上策についての相談\n1)性能情報採取の支援、性能ホットスポットの調査\n2)単体性能・並列性能向上策のアドバイス\n3)GPU上での性能分析と最適化を行うこと\n移植・環境適応\nライブラリ活用\nGPU対応",
+  "classification": "性能改善",
+  "support_tags": [
+    "移植・環境適応",
+    "ライブラリ活用",
+    "GPU対応"
+  ],
+  "technical_tags": [
+    "Communication",
+    "PerformanceAnalysis",
+    "Porting"
+  ],
+  "support_content": "1)基本性能の計測（単体性能、弱スケーリング、強スケーリング）\n2)性能阻害要因の調査（プロファイラ結果分析、コード分析）\n3)低性能箇所のCUDA実装による阻害要因の除去と高速なノード間通信技術（GPUDirect）の実装と性能評価",
+  "support_result": "・GPU単体では3.3→4.4倍高速化（CPU比較）\n・複数GPUでのスケーリング性能は最大で2倍改善した",
+  "document": "【課題】\nOpenFOAM（RapidCFD）性能の向上策についての相談\n1)性能情報採取の支援、性能ホットスポットの調査\n2)単体性能・並列性能向上策のアドバイス\n3)GPU上での性能分析と最適化を行うこと\n移植・環境適応\nライブラリ活用\nGPU対応\n\n【分類】\n性能改善\n\n【支援内容】\n1)基本性能の計測（単体性能、弱スケーリング、強スケーリング）\n2)性能阻害要因の調査（プロファイラ結果分析、コード分析）\n3)低性能箇所のCUDA実装による阻害要因の除去と高速なノード間通信技術（GPUDirect）の実装と性能評価\n\n【支援結果】\n・GPU単体では3.3→4.4倍高速化（CPU比較）\n・複数GPUでのスケーリング性能は最大で2倍改善した",
+  "speedup": 4.4,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

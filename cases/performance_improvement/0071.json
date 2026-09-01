@@ -1,0 +1,21 @@
+{
+  "case_id": 71,
+  "case_type": "performance_improvement",
+  "problem": "メモリスループットの改善による演算性能の向上\nI/O・メモリ最適化",
+  "classification": "性能改善",
+  "support_tags": [
+    "I/O・メモリ最適化"
+  ],
+  "technical_tags": [
+    "IO",
+    "Memory",
+    "PerformanceAnalysis"
+  ],
+  "support_content": "(1)基本プロファイラによるコスト分布調査を行い、高コスト部について以下の改善策の検討を行った。\n・ループ分割の抑止や配列マージによりメモリアクセス命令数の削減\n(2)詳細プロファイラを用いた改善効果の確認とプログラム全体における総合的な改善効果の確認を行った。",
+  "support_result": "入力データsolid\nasis: 4.34秒\ntune: 3.29秒\n全体で1.32倍高速化。\n入力データ01_elastic_hinge\nasis: 81.8秒\ntune: 72.4秒\n全体で1.13倍高速化。",
+  "document": "【課題】\nメモリスループットの改善による演算性能の向上\nI/O・メモリ最適化\n\n【分類】\n性能改善\n\n【支援内容】\n(1)基本プロファイラによるコスト分布調査を行い、高コスト部について以下の改善策の検討を行った。\n・ループ分割の抑止や配列マージによりメモリアクセス命令数の削減\n(2)詳細プロファイラを用いた改善効果の確認とプログラム全体における総合的な改善効果の確認を行った。\n\n【支援結果】\n入力データsolid\nasis: 4.34秒\ntune: 3.29秒\n全体で1.32倍高速化。\n入力データ01_elastic_hinge\nasis: 81.8秒\ntune: 72.4秒\n全体で1.13倍高速化。",
+  "speedup": 1.32,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

@@ -1,0 +1,23 @@
+{
+  "case_id": 93,
+  "case_type": "performance_improvement",
+  "problem": "ユーザが抱える諸問題について\nI/O・メモリ最適化\n実行支援・動作検証",
+  "classification": "性能改善",
+  "support_tags": [
+    "I/O・メモリ最適化",
+    "実行支援・動作検証"
+  ],
+  "technical_tags": [
+    "FFT",
+    "IO",
+    "MPI",
+    "Memory"
+  ],
+  "support_content": "・消費電力について\n・ファイルI/Oのスローダウンについて\n・FFT48ノード(4tofu)構成について\n・MPIランクからLLIOへの出力について",
+  "support_result": "・POWER-CAPPINGに関する情報提供、およびPOWER-CAPPINGとなったジョブのジョブ統計情報を使用し、使用電力量の一覧を作成し共有した。\n・ファイルI/Oのスローダウンについて調査を実施し、効率的な実行に向けてチェックポインティング等のアイデアを提案した。\n・FFT48ノード(4tofu)構成にてどのような3次元配置が良いかについて、2つ(4x1tofu、2x2tofu)の形状について、Re30000の問題サイズをもとに以下の3パターンで評価した。\n① 領域分割36x96を3x1tofu形状にマッピング\n② 領域分割48x72を4x1tofu形状にマッピング\n③ 領域分割48x72を2x2tofu形状にマッピング\n結果、約12%の性能向上。\n・MPIランクからLLIOへの出力について、以下の2つの観点で性能を測定した。\n① ノード内テンポラリ領域の使用\n② LLIO stripe-countの設定",
+  "document": "【課題】\nユーザが抱える諸問題について\nI/O・メモリ最適化\n実行支援・動作検証\n\n【分類】\n性能改善\n\n【支援内容】\n・消費電力について\n・ファイルI/Oのスローダウンについて\n・FFT48ノード(4tofu)構成について\n・MPIランクからLLIOへの出力について\n\n【支援結果】\n・POWER-CAPPINGに関する情報提供、およびPOWER-CAPPINGとなったジョブのジョブ統計情報を使用し、使用電力量の一覧を作成し共有した。\n・ファイルI/Oのスローダウンについて調査を実施し、効率的な実行に向けてチェックポインティング等のアイデアを提案した。\n・FFT48ノード(4tofu)構成にてどのような3次元配置が良いかについて、2つ(4x1tofu、2x2tofu)の形状について、Re30000の問題サイズをもとに以下の3パターンで評価した。\n① 領域分割36x96を3x1tofu形状にマッピング\n② 領域分割48x72を4x1tofu形状にマッピング\n③ 領域分割48x72を2x2tofu形状にマッピング\n結果、約12%の性能向上。\n・MPIランクからLLIOへの出力について、以下の2つの観点で性能を測定した。\n① ノード内テンポラリ領域の使用\n② LLIO stripe-countの設定",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": 48,
+  "max_threads": null
+}

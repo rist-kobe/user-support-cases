@@ -1,0 +1,20 @@
+{
+  "case_id": 80,
+  "case_type": "performance_improvement",
+  "problem": "自作プログラムのGPU実装における、ノード間のMPIライブラリを介した通信処理のGPUでの性能がCPUと比較して劣化している\nGPU対応",
+  "classification": "性能改善",
+  "support_tags": [
+    "GPU対応"
+  ],
+  "technical_tags": [
+    "Communication",
+    "MPI"
+  ],
+  "support_content": "通信処理のアルゴリズム変更を伴わない方策として、CUDA対応MPIの利用とGPUDirect RDMAの2つの技術を適用した。",
+  "support_result": "弱スケーリング時のスケーリング性能を改善し、256GPUまで良いスケーリングを得ることに貢献できた。",
+  "document": "【課題】\n自作プログラムのGPU実装における、ノード間のMPIライブラリを介した通信処理のGPUでの性能がCPUと比較して劣化している\nGPU対応\n\n【分類】\n性能改善\n\n【支援内容】\n通信処理のアルゴリズム変更を伴わない方策として、CUDA対応MPIの利用とGPUDirect RDMAの2つの技術を適用した。\n\n【支援結果】\n弱スケーリング時のスケーリング性能を改善し、256GPUまで良いスケーリングを得ることに貢献できた。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

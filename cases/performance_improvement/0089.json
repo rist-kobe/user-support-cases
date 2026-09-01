@@ -1,0 +1,22 @@
+{
+  "case_id": 89,
+  "case_type": "performance_improvement",
+  "problem": "3万ノード以上の3次元形状指定において、2次元領域分割（FFTとTDMA）それぞれの通信量が最低となるようなTofu座標を意識したノードマッピングの検討\nスレッド並列・通信最適化",
+  "classification": "性能改善",
+  "support_tags": [
+    "スレッド並列・通信最適化"
+  ],
+  "technical_tags": [
+    "Communication",
+    "FFT",
+    "OpenMP",
+    "Scalability"
+  ],
+  "support_content": "① FFTのalltoall通信を高速化するため、FFTを実施するノード数に応じた(12ノードFFTは1Tofu、24ノードFFTは2Tofu、36ノードFFTは3Tofu)配置を検討した。\n② TDMAの隣接間通信はランクがTofuを一筆書きとなるノード配置を検討した。\n③ ①②を考慮したノード配置をとるランクマップ最適化ツールを提供した。",
+  "support_result": "ランクマップ最適化ツールを使用することにより、ランクマップを使用しない場合と比較して3～5倍の性能値を得た。また、82,944ノードの高並列実行時にも想定通り動作した。",
+  "document": "【課題】\n3万ノード以上の3次元形状指定において、2次元領域分割（FFTとTDMA）それぞれの通信量が最低となるようなTofu座標を意識したノードマッピングの検討\nスレッド並列・通信最適化\n\n【分類】\n性能改善\n\n【支援内容】\n① FFTのalltoall通信を高速化するため、FFTを実施するノード数に応じた(12ノードFFTは1Tofu、24ノードFFTは2Tofu、36ノードFFTは3Tofu)配置を検討した。\n② TDMAの隣接間通信はランクがTofuを一筆書きとなるノード配置を検討した。\n③ ①②を考慮したノード配置をとるランクマップ最適化ツールを提供した。\n\n【支援結果】\nランクマップ最適化ツールを使用することにより、ランクマップを使用しない場合と比較して3～5倍の性能値を得た。また、82,944ノードの高並列実行時にも想定通り動作した。",
+  "speedup": 5.0,
+  "performance_improvement_percent": null,
+  "max_nodes": 82944,
+  "max_threads": null
+}

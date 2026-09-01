@@ -1,0 +1,21 @@
+{
+  "case_id": 85,
+  "case_type": "performance_improvement",
+  "problem": "オープンソース量子化学計算ソフトウェアPsi4の構築時にBLAS/LAPACKを利用できないため、conda環境で生成した実行モジュールの実行速度が遅い\n移植・環境適応\nライブラリ活用",
+  "classification": "性能改善",
+  "support_tags": [
+    "移植・環境適応",
+    "ライブラリ活用"
+  ],
+  "technical_tags": [
+    "Compiler",
+    "Porting"
+  ],
+  "support_content": "富士通コンパイラと富士通SSL2のBLAS/LAPACKを利用できるよう移植した。",
+  "support_result": "conda環境で生成した実行モジュールで24時間余でも終了しなかった計算が3.5分で終了することを確認した。",
+  "document": "【課題】\nオープンソース量子化学計算ソフトウェアPsi4の構築時にBLAS/LAPACKを利用できないため、conda環境で生成した実行モジュールの実行速度が遅い\n移植・環境適応\nライブラリ活用\n\n【分類】\n性能改善\n\n【支援内容】\n富士通コンパイラと富士通SSL2のBLAS/LAPACKを利用できるよう移植した。\n\n【支援結果】\nconda環境で生成した実行モジュールで24時間余でも終了しなかった計算が3.5分で終了することを確認した。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

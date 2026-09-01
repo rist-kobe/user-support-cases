@@ -1,0 +1,19 @@
+{
+  "case_id": 27,
+  "case_type": "porting",
+  "problem": "・CINEB計算の追加(VASPコンパイル時にコード追加)\n・結晶構造作成ツールpymatgenから，VASPのPOSCARを作成する\n移植・環境適応",
+  "classification": "実行支援",
+  "support_tags": [
+    "移植・環境適応"
+  ],
+  "technical_tags": [
+    "Porting"
+  ],
+  "support_content": "・VASP v6.3.2に、CINEB計算が出来る公開プログラム（https://theory.cm.utexas.edu/vtsttools/neb.html）を追加し、「富岳」においてビルドを可能にするパッチを提供した。\n・pymatgenを用いてVASPの入力ファイル（POSCARなど）の作成方法を説明した。\n・pymatgenを用いてVASPのTotal DOSとProjected DOSを作成するpythonスクリプトを提供した。",
+  "support_result": "・VASPにコード追加することでCINEB計算が可能になった。\n・結晶構造作成ツールpymatgenを用いて，VASPのDOS関連の入出力ファイルを扱えるようになった。",
+  "document": "【課題】\n・CINEB計算の追加(VASPコンパイル時にコード追加)\n・結晶構造作成ツールpymatgenから，VASPのPOSCARを作成する\n移植・環境適応\n\n【分類】\n実行支援\n\n【支援内容】\n・VASP v6.3.2に、CINEB計算が出来る公開プログラム（https://theory.cm.utexas.edu/vtsttools/neb.html）を追加し、「富岳」においてビルドを可能にするパッチを提供した。\n・pymatgenを用いてVASPの入力ファイル（POSCARなど）の作成方法を説明した。\n・pymatgenを用いてVASPのTotal DOSとProjected DOSを作成するpythonスクリプトを提供した。\n\n【支援結果】\n・VASPにコード追加することでCINEB計算が可能になった。\n・結晶構造作成ツールpymatgenを用いて，VASPのDOS関連の入出力ファイルを扱えるようになった。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

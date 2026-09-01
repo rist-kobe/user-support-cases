@@ -1,0 +1,21 @@
+{
+  "case_id": 12,
+  "case_type": "porting",
+  "problem": "OpenFOAMのfunctionObject機能によるRuntimeコンパイルについて、「京」でうまくいかない。「京」で利用する時に気を付けなければならないことがあれば、教えて欲しい。\n移植・環境適応\n実行支援・動作検証",
+  "classification": "移植支援",
+  "support_tags": [
+    "移植・環境適応",
+    "実行支援・動作検証"
+  ],
+  "technical_tags": [
+    "Compiler",
+    "Porting"
+  ],
+  "support_content": "「京」上で再現テストを行った際、実行時エラーが発生。発生した実行時エラーについて、コンパイラ開発側に調査依頼をしたところ、STLportのfstream系デフォルトコンストラクタによるオブジェクト確保および初期化が、dlopenした際に意図した動作となっていないことが判明し、コンパイラ開発側から回避策が示された。",
+  "support_result": "回避策を適用し、「京」上でfunctionObject機能を利用したRuntimeコンパイルが可能になり、意図した実行ができるようになった。",
+  "document": "【課題】\nOpenFOAMのfunctionObject機能によるRuntimeコンパイルについて、「京」でうまくいかない。「京」で利用する時に気を付けなければならないことがあれば、教えて欲しい。\n移植・環境適応\n実行支援・動作検証\n\n【分類】\n移植支援\n\n【支援内容】\n「京」上で再現テストを行った際、実行時エラーが発生。発生した実行時エラーについて、コンパイラ開発側に調査依頼をしたところ、STLportのfstream系デフォルトコンストラクタによるオブジェクト確保および初期化が、dlopenした際に意図した動作となっていないことが判明し、コンパイラ開発側から回避策が示された。\n\n【支援結果】\n回避策を適用し、「京」上でfunctionObject機能を利用したRuntimeコンパイルが可能になり、意図した実行ができるようになった。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

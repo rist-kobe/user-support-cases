@@ -1,0 +1,24 @@
+{
+  "case_id": 19,
+  "case_type": "performance_analysis",
+  "problem": "第一原理ソフト Quantum ESPRESSO を「京」上で効率よく実行する方法について\n(1) 並列性能のスケーラビリティ調査\n(2) 性能のホットスポットの特定\nソフトウェア評価",
+  "classification": "単体性能および並列性能の分析",
+  "support_tags": [
+    "ソフトウェア評価"
+  ],
+  "technical_tags": [
+    "Communication",
+    "LoadBalance",
+    "MPI",
+    "Memory",
+    "PerformanceAnalysis",
+    "Scalability"
+  ],
+  "support_content": "【スケーラビリティの調査】\n(簡易、詳細)性能分析ツール（FIPP、FAPP）、およびTIMER関数による計測により、並列数を増やした時にスケールしていないことが判明。また、実行効率が3.5%、メモリスループット効率が11.8%、SIMD命令率が26.9%と、利用者の想定より低い値であった。\n【ホットスポットの特定】\n演算のホットスポットはGram-schmidtの直交化法、通信のホットスポットは、MPI_Barrier関数及びXMLデータを出力するルーチンのMPI_Allreduce関数であることが判明。演算のロードインバランスが、MPI_Barrier関数のコスト値に計上されていることを指摘",
+  "support_result": "スケーラビリティ悪化の要因として、演算のロードインバランスの可能性が高く、その調査方法を提案した。更なる分析と最適化方策の検討することになった。",
+  "document": "【課題】\n第一原理ソフト Quantum ESPRESSO を「京」上で効率よく実行する方法について\n(1) 並列性能のスケーラビリティ調査\n(2) 性能のホットスポットの特定\nソフトウェア評価\n\n【分類】\n単体性能および並列性能の分析\n\n【支援内容】\n【スケーラビリティの調査】\n(簡易、詳細)性能分析ツール（FIPP、FAPP）、およびTIMER関数による計測により、並列数を増やした時にスケールしていないことが判明。また、実行効率が3.5%、メモリスループット効率が11.8%、SIMD命令率が26.9%と、利用者の想定より低い値であった。\n【ホットスポットの特定】\n演算のホットスポットはGram-schmidtの直交化法、通信のホットスポットは、MPI_Barrier関数及びXMLデータを出力するルーチンのMPI_Allreduce関数であることが判明。演算のロードインバランスが、MPI_Barrier関数のコスト値に計上されていることを指摘\n\n【支援結果】\nスケーラビリティ悪化の要因として、演算のロードインバランスの可能性が高く、その調査方法を提案した。更なる分析と最適化方策の検討することになった。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

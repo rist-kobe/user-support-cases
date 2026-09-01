@@ -1,0 +1,27 @@
+{
+  "case_id": 57,
+  "case_type": "performance_improvement",
+  "problem": "Oakforest-PACS 上でのLAMMPS計算において、単ノード計算では計算速度良好だが、マルチノード計算において速度性能があまり伸びない。性能評価／高速化を依頼。\nスレッド並列・通信最適化\n移植・環境適応",
+  "classification": "プログラム調査\n性能改善",
+  "support_tags": [
+    "スレッド並列・通信最適化",
+    "移植・環境適応"
+  ],
+  "technical_tags": [
+    "Cache",
+    "Communication",
+    "IO",
+    "MPI",
+    "Memory",
+    "OpenMP",
+    "PerformanceAnalysis",
+    "Porting"
+  ],
+  "support_content": "対象は、LAMMPS ReaxFF（OMP版）。\n(1) 実行環境の見直し\n- メモリモード ： MCDRAMのキャッシュ的利用\n- 環境変数 ： KMP_AFFINITY=scatter, I_MPI_PIN_PROCESSOR_EXCLUDE_LIST=0,1,68,69…\n- 入力パラメータ ： ファイル出力間隔の変更\n(2) 単体性能チューニング\n- 最内ループのSIMD化\n- OpenMPのクリティカル セクションの除去\n- データの2重化によるスレッド競合回避",
+  "support_result": "・ 23万粒子サイズの計算規模であれば、現在実行しているノード数での並列性能のスケールに問題ないことを確認\n・ 実行環境の見直しにより、asis版と比較して、タイムステップループが、約1.7倍高速化\n・ 単体性能チューニングにより、asis版と比較して、タイムステップループが、約1.2倍高速化\n・ 実行環境の見直し＋単体性能チューニングにより、asis版と比較して、タイムステップループが約2倍高速化",
+  "document": "【課題】\nOakforest-PACS 上でのLAMMPS計算において、単ノード計算では計算速度良好だが、マルチノード計算において速度性能があまり伸びない。性能評価／高速化を依頼。\nスレッド並列・通信最適化\n移植・環境適応\n\n【分類】\nプログラム調査\n性能改善\n\n【支援内容】\n対象は、LAMMPS ReaxFF（OMP版）。\n(1) 実行環境の見直し\n- メモリモード ： MCDRAMのキャッシュ的利用\n- 環境変数 ： KMP_AFFINITY=scatter, I_MPI_PIN_PROCESSOR_EXCLUDE_LIST=0,1,68,69…\n- 入力パラメータ ： ファイル出力間隔の変更\n(2) 単体性能チューニング\n- 最内ループのSIMD化\n- OpenMPのクリティカル セクションの除去\n- データの2重化によるスレッド競合回避\n\n【支援結果】\n・ 23万粒子サイズの計算規模であれば、現在実行しているノード数での並列性能のスケールに問題ないことを確認\n・ 実行環境の見直しにより、asis版と比較して、タイムステップループが、約1.7倍高速化\n・ 単体性能チューニングにより、asis版と比較して、タイムステップループが、約1.2倍高速化\n・ 実行環境の見直し＋単体性能チューニングにより、asis版と比較して、タイムステップループが約2倍高速化",
+  "speedup": 2.0,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

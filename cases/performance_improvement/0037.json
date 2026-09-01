@@ -1,0 +1,19 @@
+{
+  "case_id": 37,
+  "case_type": "performance_improvement",
+  "problem": "SC15 に向けて、プログラム GAMERA 内の定式化やデータ構造等の改良により、プログラムの変更を行ったので、当該部分の高度化の検討（この高度化が、CPU 単体性能の向上がカギ）\nコード構造の改善",
+  "classification": "性能分析および単体性能改善",
+  "support_tags": [
+    "コード構造の改善"
+  ],
+  "technical_tags": [
+    "PerformanceAnalysis"
+  ],
+  "support_content": "単体性能の性能分析を実施した。精密PAのL1Iミス率が高かったが、ループ内のボディが大きいためと判明したため、ループ分割等を提案した。他にも性能分析で得られた知見をSC15向け論文の性能情報として提供した。",
+  "support_result": "研究成果論文が、SC15 Gordon Bellのファイナリストに選出された。",
+  "document": "【課題】\nSC15 に向けて、プログラム GAMERA 内の定式化やデータ構造等の改良により、プログラムの変更を行ったので、当該部分の高度化の検討（この高度化が、CPU 単体性能の向上がカギ）\nコード構造の改善\n\n【分類】\n性能分析および単体性能改善\n\n【支援内容】\n単体性能の性能分析を実施した。精密PAのL1Iミス率が高かったが、ループ内のボディが大きいためと判明したため、ループ分割等を提案した。他にも性能分析で得られた知見をSC15向け論文の性能情報として提供した。\n\n【支援結果】\n研究成果論文が、SC15 Gordon Bellのファイナリストに選出された。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

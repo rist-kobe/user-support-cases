@@ -1,0 +1,20 @@
+{
+  "case_id": 24,
+  "case_type": "porting",
+  "problem": "「富岳」におけるParSplice (Parallel Trajectory Splicing algorithm)の構築\n移植・環境適応",
+  "classification": "移植支援",
+  "support_tags": [
+    "移植・環境適応"
+  ],
+  "technical_tags": [
+    "Compiler",
+    "Porting"
+  ],
+  "support_content": "exaaltに含まれる3種類のコードLATTE, LAMMPS, ParSpliceについて、「富岳」および富士通コンパイラ環境における構築手順を検討した。また、利用者提供データを用いて動作確認を実施した。",
+  "support_result": "構築した手順書を提供し、データと動作結果に基づき、性能に関する今後の検討事項をまとめ、依頼者に報告した。",
+  "document": "【課題】\n「富岳」におけるParSplice (Parallel Trajectory Splicing algorithm)の構築\n移植・環境適応\n\n【分類】\n移植支援\n\n【支援内容】\nexaaltに含まれる3種類のコードLATTE, LAMMPS, ParSpliceについて、「富岳」および富士通コンパイラ環境における構築手順を検討した。また、利用者提供データを用いて動作確認を実施した。\n\n【支援結果】\n構築した手順書を提供し、データと動作結果に基づき、性能に関する今後の検討事項をまとめ、依頼者に報告した。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

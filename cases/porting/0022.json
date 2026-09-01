@@ -1,0 +1,21 @@
+{
+  "case_id": 22,
+  "case_type": "porting",
+  "problem": "実験データを画像処理するためのプログラム開発における、ライブラリ、コンパイラ、ジョブシステムの使用に関して\n移植・環境適応",
+  "classification": "実行支援",
+  "support_tags": [
+    "移植・環境適応"
+  ],
+  "technical_tags": [
+    "Communication",
+    "Compiler",
+    "Porting"
+  ],
+  "support_content": "一連の動作確認を行う中で、「富岳」のFEFSからSHAREDTMPへのファイル転送で時間がかかることが判明。",
+  "support_result": "単純コピーと比べて、非同期オプションを併用した並列コピーにより、約8.5倍高速化された。",
+  "document": "【課題】\n実験データを画像処理するためのプログラム開発における、ライブラリ、コンパイラ、ジョブシステムの使用に関して\n移植・環境適応\n\n【分類】\n実行支援\n\n【支援内容】\n一連の動作確認を行う中で、「富岳」のFEFSからSHAREDTMPへのファイル転送で時間がかかることが判明。\n\n【支援結果】\n単純コピーと比べて、非同期オプションを併用した並列コピーにより、約8.5倍高速化された。",
+  "speedup": 8.5,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

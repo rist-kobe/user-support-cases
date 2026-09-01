@@ -1,0 +1,21 @@
+{
+  "case_id": 39,
+  "case_type": "performance_improvement",
+  "problem": "AMBER12に対して施した高度化をAMBER14に適用する件\nコード構造の改善",
+  "classification": "性能分析および並列性能改善",
+  "support_tags": [
+    "コード構造の改善"
+  ],
+  "technical_tags": [
+    "MD",
+    "PerformanceAnalysis",
+    "Porting"
+  ],
+  "support_content": "AMBER12に施した変更をAMBER14にも適用した。更に基本プロファイラの出力を分析し、CPU負荷の高い内部ルーチンの2次元配列の添字順序を入替えた。また、呼出し回数の多いルーチンをインライン展開した。",
+  "support_result": "一連の移植と最適化の結果、並列数が8/16/32/64の時において、実行速度がそれぞれ1.26/1.27/1.31/1.39倍に向上した。",
+  "document": "【課題】\nAMBER12に対して施した高度化をAMBER14に適用する件\nコード構造の改善\n\n【分類】\n性能分析および並列性能改善\n\n【支援内容】\nAMBER12に施した変更をAMBER14にも適用した。更に基本プロファイラの出力を分析し、CPU負荷の高い内部ルーチンの2次元配列の添字順序を入替えた。また、呼出し回数の多いルーチンをインライン展開した。\n\n【支援結果】\n一連の移植と最適化の結果、並列数が8/16/32/64の時において、実行速度がそれぞれ1.26/1.27/1.31/1.39倍に向上した。",
+  "speedup": 1.39,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

@@ -1,0 +1,19 @@
+{
+  "case_id": 17,
+  "case_type": "porting",
+  "problem": "Quantum ESPRESSO(ver.6.5)の「富岳」への移植と動作確認\n移植・環境適応",
+  "classification": "移植支援",
+  "support_tags": [
+    "移植・環境適応"
+  ],
+  "technical_tags": [
+    "Porting"
+  ],
+  "support_content": "Quantum ESPRESSOの当時の最新版であるver.6.5の「富岳」への移植、および依頼者指定の入力モデルによる動作確認。さらに、「富岳」向けにScaLAPACKをSSL IIに置き換えを実施。",
+  "support_result": "依頼者の入力モデルが正常に計算できることを確認した。ScaLAPACKをSSLⅡに置き換えることで、依頼者の入力モデルにおいて２倍程度高速化された。",
+  "document": "【課題】\nQuantum ESPRESSO(ver.6.5)の「富岳」への移植と動作確認\n移植・環境適応\n\n【分類】\n移植支援\n\n【支援内容】\nQuantum ESPRESSOの当時の最新版であるver.6.5の「富岳」への移植、および依頼者指定の入力モデルによる動作確認。さらに、「富岳」向けにScaLAPACKをSSL IIに置き換えを実施。\n\n【支援結果】\n依頼者の入力モデルが正常に計算できることを確認した。ScaLAPACKをSSLⅡに置き換えることで、依頼者の入力モデルにおいて２倍程度高速化された。",
+  "speedup": 2.0,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

@@ -1,0 +1,20 @@
+{
+  "case_id": 36,
+  "case_type": "porting",
+  "problem": "・ある物質用に作成した力場の妥当性の計算（熱膨張係数）方法の説明\n・MACE+LAMMPS（https://mace-docs.readthedocs.io/en/latest/guide/lammps.html）を「富岳」計算ノードでのビルドと実行を試す\n・MACE+LAMMPSの「富岳」プリポスト環境（CPU:Intel + GPU:V100）でのビルドと実行を試す\n・MACEの実行方法の説明\n移植・環境適応",
+  "classification": "移植・実行支援",
+  "support_tags": [
+    "移植・環境適応"
+  ],
+  "technical_tags": [
+    "Compiler",
+    "Porting"
+  ],
+  "support_content": "・特定の物質用に作成された力場の妥当性の計算（熱膨張係数）方法を説明した。\n・「富岳」計算ノード（CPU:A64FX）でのMACE+LAMMPSの構築に成功しない理由を説明し、代替手段として、「富岳」プリポスト（CPU:Intel+GPU:V100）でMACE+LAMMPSの環境（GPU版とCPU版の両方）を構築した。\n・MACEの実行方法を説明した。",
+  "support_result": "MACE+LAMMPSをコンパイルするには、PyTorch C++ API（LibTorch）のライブラリが必要であり、PyTorch C++ API（LibTorch）のビルドにはC++17が必須だが、「富岳」計算ノードで富士通コンパイラを用い、-Nclang -std=c++17でビルドすると、支援担当時点では解決策が不明なエラーが出現したため、今回の支援では「富岳」計算ノードでの環境提供は断念した。一方で、「富岳」プリポスト環境では、x86向けのビルド済みPyTorch C++ API（LibTorch）をダウンロードして利用できるため、MACE+LAMMPSをGPU用とCPU用の両方の環境を構築し、提供した。",
+  "document": "【課題】\n・ある物質用に作成した力場の妥当性の計算（熱膨張係数）方法の説明\n・MACE+LAMMPS（https://mace-docs.readthedocs.io/en/latest/guide/lammps.html）を「富岳」計算ノードでのビルドと実行を試す\n・MACE+LAMMPSの「富岳」プリポスト環境（CPU:Intel + GPU:V100）でのビルドと実行を試す\n・MACEの実行方法の説明\n移植・環境適応\n\n【分類】\n移植・実行支援\n\n【支援内容】\n・特定の物質用に作成された力場の妥当性の計算（熱膨張係数）方法を説明した。\n・「富岳」計算ノード（CPU:A64FX）でのMACE+LAMMPSの構築に成功しない理由を説明し、代替手段として、「富岳」プリポスト（CPU:Intel+GPU:V100）でMACE+LAMMPSの環境（GPU版とCPU版の両方）を構築した。\n・MACEの実行方法を説明した。\n\n【支援結果】\nMACE+LAMMPSをコンパイルするには、PyTorch C++ API（LibTorch）のライブラリが必要であり、PyTorch C++ API（LibTorch）のビルドにはC++17が必須だが、「富岳」計算ノードで富士通コンパイラを用い、-Nclang -std=c++17でビルドすると、支援担当時点では解決策が不明なエラーが出現したため、今回の支援では「富岳」計算ノードでの環境提供は断念した。一方で、「富岳」プリポスト環境では、x86向けのビルド済みPyTorch C++ API（LibTorch）をダウンロードして利用できるため、MACE+LAMMPSをGPU用とCPU用の両方の環境を構築し、提供した。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

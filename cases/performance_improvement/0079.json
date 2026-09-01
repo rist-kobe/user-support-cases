@@ -1,0 +1,26 @@
+{
+  "case_id": 79,
+  "case_type": "performance_improvement",
+  "problem": "「富岳」で利用できるDFTB 法に基づくMD計算 (DFTB-MD) 用オープンソース系ソフトウェアの調査\nコード構造の改善\n移植・環境適応\nライブラリ活用",
+  "classification": "性能改善",
+  "support_tags": [
+    "コード構造の改善",
+    "移植・環境適応",
+    "ライブラリ活用"
+  ],
+  "technical_tags": [
+    "Compiler",
+    "LoadBalance",
+    "Memory",
+    "OpenMP",
+    "Porting",
+    "Scalability"
+  ],
+  "support_content": "DFTB+, xTB, LATTEの3種類のコードを調査した。特に、「富岳」で動作実績のあるDFTB+ (v18.2)とxTBとの比較に注力した。 xTB (v6.4.1), LATTE(v.1.2.2)を富士通コンパイラを用いて「富岳」向けに移植した。 xTBについてチューニング実施した。 主な内容は次の3点:",
+  "support_result": "xTBおよびLATTEについてCMakeと富士通コンパイラでの構築手順を確立した。 xTBについて、チューニングでAs-isから1.5倍の速度向上 (12スレッド)を得た。スレッド並列スケーラビリティには、インバランス緩和 (schedule(dynamic,1))とラージページ (XOS_MMM_L_ARENA_LOCK_TYPE=0による並列領域内の動的メモリ確保に伴う排他的処理の回避\n※\n) が良い影響を与えることを見出した。 xTBとDFTB+を比較し、xTBがより良好なノード内スレッド並列性能を示すことを確認した。",
+  "document": "【課題】\n「富岳」で利用できるDFTB 法に基づくMD計算 (DFTB-MD) 用オープンソース系ソフトウェアの調査\nコード構造の改善\n移植・環境適応\nライブラリ活用\n\n【分類】\n性能改善\n\n【支援内容】\nDFTB+, xTB, LATTEの3種類のコードを調査した。特に、「富岳」で動作実績のあるDFTB+ (v18.2)とxTBとの比較に注力した。 xTB (v6.4.1), LATTE(v.1.2.2)を富士通コンパイラを用いて「富岳」向けに移植した。 xTBについてチューニング実施した。 主な内容は次の3点:\n\n【支援結果】\nxTBおよびLATTEについてCMakeと富士通コンパイラでの構築手順を確立した。 xTBについて、チューニングでAs-isから1.5倍の速度向上 (12スレッド)を得た。スレッド並列スケーラビリティには、インバランス緩和 (schedule(dynamic,1))とラージページ (XOS_MMM_L_ARENA_LOCK_TYPE=0による並列領域内の動的メモリ確保に伴う排他的処理の回避\n※\n) が良い影響を与えることを見出した。 xTBとDFTB+を比較し、xTBがより良好なノード内スレッド並列性能を示すことを確認した。",
+  "speedup": 1.5,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": 12
+}

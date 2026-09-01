@@ -1,0 +1,22 @@
+{
+  "case_id": 7,
+  "case_type": "porting",
+  "problem": "OpenFOAM の派生のソフトである Helyx-Core の「京」での動作実績がなかったため、移植支援と動作確認を依頼された。\n移植・環境適応\nソフトウェア評価",
+  "classification": "移植支援",
+  "support_tags": [
+    "移植・環境適応",
+    "ソフトウェア評価"
+  ],
+  "technical_tags": [
+    "Communication",
+    "PerformanceAnalysis",
+    "Porting"
+  ],
+  "support_content": "OpenFOAMの移植実績を参考に、Helyx-Coreの「京」への移植を行った。併せて単体及び並列性能分析を実施した。",
+  "support_result": "Helyx-Coreの「京」で動作を確認した。また、性能分析の結果、現状では単体性能・並列性能、共に芳しくなく、また通信周りに問題があることを指摘した。",
+  "document": "【課題】\nOpenFOAM の派生のソフトである Helyx-Core の「京」での動作実績がなかったため、移植支援と動作確認を依頼された。\n移植・環境適応\nソフトウェア評価\n\n【分類】\n移植支援\n\n【支援内容】\nOpenFOAMの移植実績を参考に、Helyx-Coreの「京」への移植を行った。併せて単体及び並列性能分析を実施した。\n\n【支援結果】\nHelyx-Coreの「京」で動作を確認した。また、性能分析の結果、現状では単体性能・並列性能、共に芳しくなく、また通信周りに問題があることを指摘した。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

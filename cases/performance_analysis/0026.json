@@ -1,0 +1,23 @@
+{
+  "case_id": 26,
+  "case_type": "performance_analysis",
+  "problem": "スペクトル法による三次元乱流計算の高並列化（使用データ点数は、20,483点で、SX-ACEを256ノード用いて計算しているが、今後、40,963点以上に大規模化することを検討中）について、SX-ACEを1,024ノード用いた場合に、並列化効率を50%以上とできるかの検討\nソフトウェア評価",
+  "classification": "性能評価と分析",
+  "support_tags": [
+    "ソフトウェア評価"
+  ],
+  "technical_tags": [
+    "Communication",
+    "FFT",
+    "MPI",
+    "PerformanceAnalysis",
+    "Scalability"
+  ],
+  "support_content": "SX-ACEが持つ、区間解析機能(ftrace_region)を用いて、詳細な性能分析を行った。その結果、1,024 並列実行時に、経過時間の 54% が FFT に関連する MPI 集団通信 alltoallv である事が判明した。",
+  "support_result": "性能のボトルネックとなっている部分が、FFT に付随する MPI の集団通信であり、この部分に対する性能の改善は見込めないことを納得いただいた。",
+  "document": "【課題】\nスペクトル法による三次元乱流計算の高並列化（使用データ点数は、20,483点で、SX-ACEを256ノード用いて計算しているが、今後、40,963点以上に大規模化することを検討中）について、SX-ACEを1,024ノード用いた場合に、並列化効率を50%以上とできるかの検討\nソフトウェア評価\n\n【分類】\n性能評価と分析\n\n【支援内容】\nSX-ACEが持つ、区間解析機能(ftrace_region)を用いて、詳細な性能分析を行った。その結果、1,024 並列実行時に、経過時間の 54% が FFT に関連する MPI 集団通信 alltoallv である事が判明した。\n\n【支援結果】\n性能のボトルネックとなっている部分が、FFT に付随する MPI の集団通信であり、この部分に対する性能の改善は見込めないことを納得いただいた。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

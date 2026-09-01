@@ -1,0 +1,22 @@
+{
+  "case_id": 65,
+  "case_type": "performance_improvement",
+  "problem": "性能分析と単体性能向上\nコード構造の改善",
+  "classification": "性能分析\n性能改善",
+  "support_tags": [
+    "コード構造の改善"
+  ],
+  "technical_tags": [
+    "Communication",
+    "LoadBalance",
+    "OpenMP",
+    "PerformanceAnalysis"
+  ],
+  "support_content": "通信と演算の分離後、性能分析を実施した。高コスト部分に対して、演算と通信のオーバーラップや、ループ内のif文の除去、指示行による最適化の促進、スレッド間インバランスを抑止するコード修正、関数のインライン展開等を行った。",
+  "support_result": "チューニングの効果は、タイムステップループで1.7倍高速化\n・asis: 386.81 [s]\n・tune: 225.93 [s]\nこの支援を受け依頼者は、これからのコード開発において同じような高度化を適用することになった。",
+  "document": "【課題】\n性能分析と単体性能向上\nコード構造の改善\n\n【分類】\n性能分析\n性能改善\n\n【支援内容】\n通信と演算の分離後、性能分析を実施した。高コスト部分に対して、演算と通信のオーバーラップや、ループ内のif文の除去、指示行による最適化の促進、スレッド間インバランスを抑止するコード修正、関数のインライン展開等を行った。\n\n【支援結果】\nチューニングの効果は、タイムステップループで1.7倍高速化\n・asis: 386.81 [s]\n・tune: 225.93 [s]\nこの支援を受け依頼者は、これからのコード開発において同じような高度化を適用することになった。",
+  "speedup": 1.7,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

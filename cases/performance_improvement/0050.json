@@ -1,0 +1,23 @@
+{
+  "case_id": 50,
+  "case_type": "performance_improvement",
+  "problem": "電磁界解析プログラムの逐次実行コードの性能分析と性能向上\nコード構造の改善\nI/O・メモリ最適化\nライブラリ活用",
+  "classification": "性能改善",
+  "support_tags": [
+    "コード構造の改善",
+    "I/O・メモリ最適化",
+    "ライブラリ活用"
+  ],
+  "technical_tags": [
+    "IO",
+    "Memory",
+    "PerformanceAnalysis"
+  ],
+  "support_content": "1）SIMD命令を有効にするために、コード修正\n2）BLAS利用と、その有効性のチェック\n3）動的メモリ割り当てをmallocとcallocの代わりにTCmallocライブラリを利用し、その性能評価",
+  "support_result": "性能向上策を適用した。２種類のデータセットに対して、以下の性能となった。\nE100データセット：\n189秒(ASIS)→139秒(tune)　1.36倍\nE1000データセット：\n586秒(ASIS)→458秒(tune)　1.27倍",
+  "document": "【課題】\n電磁界解析プログラムの逐次実行コードの性能分析と性能向上\nコード構造の改善\nI/O・メモリ最適化\nライブラリ活用\n\n【分類】\n性能改善\n\n【支援内容】\n1）SIMD命令を有効にするために、コード修正\n2）BLAS利用と、その有効性のチェック\n3）動的メモリ割り当てをmallocとcallocの代わりにTCmallocライブラリを利用し、その性能評価\n\n【支援結果】\n性能向上策を適用した。２種類のデータセットに対して、以下の性能となった。\nE100データセット：\n189秒(ASIS)→139秒(tune)　1.36倍\nE1000データセット：\n586秒(ASIS)→458秒(tune)　1.27倍",
+  "speedup": 1.36,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

@@ -1,0 +1,21 @@
+{
+  "case_id": 17,
+  "case_type": "performance_analysis",
+  "problem": "4,096core を用いた実行時にスケーラビリティが低下する原因について\nソフトウェア評価",
+  "classification": "並列性能の分析",
+  "support_tags": [
+    "ソフトウェア評価"
+  ],
+  "technical_tags": [
+    "IO",
+    "PerformanceAnalysis",
+    "Scalability"
+  ],
+  "support_content": "性能分析ツールでは原因箇所を特定出来なかったため、ループ1回転毎の実行時間をタイマー計測し、詳細に分析を実施。その結果、原因が初期処理のI/Oにあると特定",
+  "support_result": "スケーラビリティ低下は初期処理のみであり、実データでの実行において、影響は無視できる事が判明し、プロダクトランに入った。",
+  "document": "【課題】\n4,096core を用いた実行時にスケーラビリティが低下する原因について\nソフトウェア評価\n\n【分類】\n並列性能の分析\n\n【支援内容】\n性能分析ツールでは原因箇所を特定出来なかったため、ループ1回転毎の実行時間をタイマー計測し、詳細に分析を実施。その結果、原因が初期処理のI/Oにあると特定\n\n【支援結果】\nスケーラビリティ低下は初期処理のみであり、実データでの実行において、影響は無視できる事が判明し、プロダクトランに入った。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

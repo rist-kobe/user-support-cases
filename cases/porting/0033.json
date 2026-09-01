@@ -1,0 +1,21 @@
+{
+  "case_id": 33,
+  "case_type": "porting",
+  "problem": "九大・玄界上で、デッドロック状態になる問題について\n実行支援・動作検証",
+  "classification": "移植支援",
+  "support_tags": [
+    "実行支援・動作検証"
+  ],
+  "technical_tags": [
+    "Communication",
+    "MPI",
+    "Porting"
+  ],
+  "support_content": "九大はシステム側から、RISTはプログラム側から、協力して原因究明を試みた。",
+  "support_result": "前年度支援実績があるコードであり、通信方式の変更で回避できることと、Intel MPIのバージョン変更で回避できることがわかった。",
+  "document": "【課題】\n九大・玄界上で、デッドロック状態になる問題について\n実行支援・動作検証\n\n【分類】\n移植支援\n\n【支援内容】\n九大はシステム側から、RISTはプログラム側から、協力して原因究明を試みた。\n\n【支援結果】\n前年度支援実績があるコードであり、通信方式の変更で回避できることと、Intel MPIのバージョン変更で回避できることがわかった。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

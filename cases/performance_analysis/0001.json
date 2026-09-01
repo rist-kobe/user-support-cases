@@ -1,0 +1,19 @@
+{
+  "case_id": 1,
+  "case_type": "performance_analysis",
+  "problem": "OSS の FFT ライブラリの性能が不足のため、FFT ライブラリの性能調査を依頼。\nソフトウェア評価",
+  "classification": "FFTライブラリの性能調査",
+  "support_tags": [
+    "ソフトウェア評価"
+  ],
+  "technical_tags": [
+    "FFT"
+  ],
+  "support_content": "利用者が用いているFFTライブラリと、「京」向けに最適化されたFFTライブラリを評価。\nその性能比較の結果を提示。",
+  "support_result": "「京」向けに最適化されたFFTライブラリの使用方法を説明、またサンプルコードを提供。",
+  "document": "【課題】\nOSS の FFT ライブラリの性能が不足のため、FFT ライブラリの性能調査を依頼。\nソフトウェア評価\n\n【分類】\nFFTライブラリの性能調査\n\n【支援内容】\n利用者が用いているFFTライブラリと、「京」向けに最適化されたFFTライブラリを評価。その性能比較の結果を提示。\n\n【支援結果】\n「京」向けに最適化されたFFTライブラリの使用方法を説明、またサンプルコードを提供。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

@@ -1,0 +1,23 @@
+{
+  "case_id": 22,
+  "case_type": "performance_analysis",
+  "problem": "OpenFOAM でのコンパイラーによる高速化、並列化効率の向上方法の調査依頼\n移植・環境適応\nソフトウェア評価",
+  "classification": "移植支援および性能分析",
+  "support_tags": [
+    "移植・環境適応",
+    "ソフトウェア評価"
+  ],
+  "technical_tags": [
+    "Compiler",
+    "MPI",
+    "PerformanceAnalysis",
+    "Porting"
+  ],
+  "support_content": "当初50万cellと小型だったものから、中規模(160万cell), 大規模(970万cell)まで規模を拡大し、並列スケールの性能評価を実施。妥当なデータ規模と利用資源(MPI数)の違いによる実行効率の関係を説明。",
+  "support_result": "OpenFOAMの性能評価情報より、当初の小規模の160MPI並列から、目標とする大規模の1280MPIまで拡大できた。また、OpenFOAMの最適化情報提供により、640MPI並列で1.4倍の性能向上となった。",
+  "document": "【課題】\nOpenFOAM でのコンパイラーによる高速化、並列化効率の向上方法の調査依頼\n移植・環境適応\nソフトウェア評価\n\n【分類】\n移植支援および性能分析\n\n【支援内容】\n当初50万cellと小型だったものから、中規模(160万cell), 大規模(970万cell)まで規模を拡大し、並列スケールの性能評価を実施。妥当なデータ規模と利用資源(MPI数)の違いによる実行効率の関係を説明。\n\n【支援結果】\nOpenFOAMの性能評価情報より、当初の小規模の160MPI並列から、目標とする大規模の1280MPIまで拡大できた。また、OpenFOAMの最適化情報提供により、640MPI並列で1.4倍の性能向上となった。",
+  "speedup": 1.4,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

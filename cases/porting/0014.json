@@ -1,0 +1,19 @@
+{
+  "case_id": 14,
+  "case_type": "porting",
+  "problem": "RISTがアプリソフト利用環境整備の一環で提供したOpenFOAMは「dynamic code」機能を利用できず、チュートリアル (cylinder)を実行できなかったため、対応をお願いしたい。\n移植・環境適応",
+  "classification": "移植支援",
+  "support_tags": [
+    "移植・環境適応"
+  ],
+  "technical_tags": [
+    "Porting"
+  ],
+  "support_content": "利用支援の一環として「利用者が多いアプリケーションソフトウェアに対して、標準機能の利用環境整備」を行っている。「京」に整備したOpenFOAMに不足していた「dynamic code」機能を追加し、チュートリアルの実行を確認した。",
+  "support_result": "「京」上で「dynamic code」機能をインストールし、依頼者へ利用情報を提供した。",
+  "document": "【課題】\nRISTがアプリソフト利用環境整備の一環で提供したOpenFOAMは「dynamic code」機能を利用できず、チュートリアル (cylinder)を実行できなかったため、対応をお願いしたい。\n移植・環境適応\n\n【分類】\n移植支援\n\n【支援内容】\n利用支援の一環として「利用者が多いアプリケーションソフトウェアに対して、標準機能の利用環境整備」を行っている。「京」に整備したOpenFOAMに不足していた「dynamic code」機能を追加し、チュートリアルの実行を確認した。\n\n【支援結果】\n「京」上で「dynamic code」機能をインストールし、依頼者へ利用情報を提供した。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

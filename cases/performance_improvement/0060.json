@@ -1,0 +1,20 @@
+{
+  "case_id": 60,
+  "case_type": "performance_improvement",
+  "problem": "HELYX向けの高速化パッチファイルが必要\n1)HELYXはOpenFOAM2.2がベースだが、RISTが提供するパッチは、適用可能か。\n2)推奨のコンパイラのバージョンはあるか。\n移植・環境適応",
+  "classification": "性能改善",
+  "support_tags": [
+    "移植・環境適応"
+  ],
+  "technical_tags": [
+    "Compiler",
+    "Porting"
+  ],
+  "support_content": "1)HELYX版パッチファイルを適用し、正常に更新されていることを確認した。\n2)依頼時における最新版のコンパイラでコンパイルし、簡単な動作確認を行い、正常終了することを確認した。",
+  "support_result": "Helyxの高速化パッチを適用した結果、390万要素の問題規模において、256並列で1.66倍の性能向上が確認できた。",
+  "document": "【課題】\nHELYX向けの高速化パッチファイルが必要\n1)HELYXはOpenFOAM2.2がベースだが、RISTが提供するパッチは、適用可能か。\n2)推奨のコンパイラのバージョンはあるか。\n移植・環境適応\n\n【分類】\n性能改善\n\n【支援内容】\n1)HELYX版パッチファイルを適用し、正常に更新されていることを確認した。\n2)依頼時における最新版のコンパイラでコンパイルし、簡単な動作確認を行い、正常終了することを確認した。\n\n【支援結果】\nHelyxの高速化パッチを適用した結果、390万要素の問題規模において、256並列で1.66倍の性能向上が確認できた。",
+  "speedup": 1.66,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}

@@ -1,0 +1,21 @@
+{
+  "case_id": 41,
+  "case_type": "performance_analysis",
+  "problem": "CT画像再構成プログラムKIERTÄÄを「富岳」で公開する前のI/O性能の確認と公開作業\nI/O・メモリ最適化",
+  "classification": "性能・環境調査",
+  "support_tags": [
+    "I/O・メモリ最適化"
+  ],
+  "technical_tags": [
+    "IO",
+    "MPI",
+    "Memory"
+  ],
+  "support_content": "中間ファイルの配置場所として、SHAREDTMP(STMP)や/worktmpなどを試した。また、サイズの違う幾つかの入力ファイルに対し、１ノードあたりのMPIプロセス数を変えてメモリサイズをプロットした。",
+  "support_result": "メモリサイズとI/O時間を調整したモジュールをSpackを用いて、さらには「富岳」OnDemand上から利用できるようになった。",
+  "document": "【課題】\nCT画像再構成プログラムKIERTÄÄを「富岳」で公開する前のI/O性能の確認と公開作業\nI/O・メモリ最適化\n\n【分類】\n性能・環境調査\n\n【支援内容】\n中間ファイルの配置場所として、SHAREDTMP(STMP)や/worktmpなどを試した。また、サイズの違う幾つかの入力ファイルに対し、１ノードあたりのMPIプロセス数を変えてメモリサイズをプロットした。\n\n【支援結果】\nメモリサイズとI/O時間を調整したモジュールをSpackを用いて、さらには「富岳」OnDemand上から利用できるようになった。",
+  "speedup": null,
+  "performance_improvement_percent": null,
+  "max_nodes": null,
+  "max_threads": null
+}
