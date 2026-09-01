@@ -280,7 +280,13 @@
   function setupModal() {
     elements.modalClose.addEventListener("click", closeDetail);
     elements.modalOverlay.addEventListener("click", function (event) {
-      if (event.target === elements.modalOverlay) {
+      var modalRect = elements.modalOverlay.querySelector(".modal").getBoundingClientRect();
+      var isInsideModal =
+        event.clientX >= modalRect.left &&
+        event.clientX <= modalRect.right &&
+        event.clientY >= modalRect.top &&
+        event.clientY <= modalRect.bottom;
+      if (!isInsideModal) {
         closeDetail();
       }
     });
@@ -316,20 +322,30 @@
     openDetailFromQuery();
   }
 
-  fetch(DATA_URL)
-    .then(function (response) {
-      if (!response.ok) {
-        throw new Error("Failed to load " + DATA_URL);
-      }
-      return response.json();
-    })
-    .then(init)
-    .catch(function (error) {
-      var container = document.getElementById("case-list");
-      container.innerHTML =
-        '<div class="empty-state">データの読み込みに失敗しました: ' +
-        escapeHtml(error.message) +
-        "</div>";
-      console.error(error);
-    });
+  function main() {
+    fetch(DATA_URL)
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error("Failed to load " + DATA_URL);
+        }
+        return response.json();
+      })
+      .then(init)
+      .catch(function (error) {
+        var container = document.getElementById("case-list");
+        if (container) {
+          container.innerHTML =
+            '<div class="empty-state">データの読み込みに失敗しました: ' +
+            escapeHtml(error.message) +
+            "</div>";
+        }
+        console.error(error);
+      });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", main);
+  } else {
+    main();
+  }
 })();
