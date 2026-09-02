@@ -72,7 +72,7 @@ scripts/
 
 ## GitHub Pages ビューア
 
-`tools/README.md` に詳細なビューア関連の補足をまとめています。`cases/` 配下のJSONをブラウザ上でドキュメントとして閲覧できる、検索・一覧機能付きの静的サイトを `docs/` に用意しています。
+本節が GitHub Pages ビューアの公式な説明です。`tools/README.md` は補足として参照できる簡易ガイドです。`cases/` 配下のJSONをブラウザ上でドキュメントとして閲覧できる、検索・一覧機能付きの静的サイトを `docs/` に用意しています。
 
 - 公開URL: https://rist-kobe.github.io/user-support-cases/
 - 機能: カテゴリ別一覧・キーワード全文検索・タグ絞り込み（支援タグ / 技術タグ）・詳細表示（`?case=` クエリパラメータまたはモーダル）
