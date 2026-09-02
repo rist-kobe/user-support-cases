@@ -12,6 +12,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: pages-data-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-data:
     runs-on: ubuntu-latest
