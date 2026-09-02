@@ -245,7 +245,7 @@
     showModal();
     var params = new URLSearchParams(window.location.search);
     params.set("case", uid(caseItem));
-    history.replaceState(null, "", "?" + params.toString());
+    history.replaceState(null, "", "?" + params.toString() + window.location.hash);
   }
 
   function closeDetail() {
@@ -261,7 +261,11 @@
     var params = new URLSearchParams(window.location.search);
     params.delete("case");
     var query = params.toString();
-    history.replaceState(null, "", query ? "?" + query : window.location.pathname);
+    history.replaceState(
+      null,
+      "",
+      (query ? "?" + query : window.location.pathname) + window.location.hash
+    );
   }
 
   function openDetailFromQuery() {
@@ -300,22 +304,52 @@
     });
   }
 
+  function getFocusableElements() {
+    var modal = elements.modalOverlay.querySelector(".modal");
+    var nodeList = modal.querySelectorAll(
+      'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    );
+    return Array.prototype.filter.call(nodeList, function (el) {
+      return el.offsetParent !== null;
+    });
+  }
+
+  function trapFocus(event) {
+    var focusable = getFocusableElements();
+    if (focusable.length === 0) {
+      return;
+    }
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+    if (event.shiftKey) {
+      if (document.activeElement === first || !elements.modalOverlay.contains(document.activeElement)) {
+        event.preventDefault();
+        last.focus();
+      }
+    } else {
+      if (document.activeElement === last || !elements.modalOverlay.contains(document.activeElement)) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+  }
+
   function setupModal() {
+    var modal = elements.modalOverlay.querySelector(".modal");
     elements.modalClose.addEventListener("click", closeDetail);
     elements.modalOverlay.addEventListener("click", function (event) {
-      var modalRect = elements.modalOverlay.querySelector(".modal").getBoundingClientRect();
-      var isInsideModal =
-        event.clientX >= modalRect.left &&
-        event.clientX <= modalRect.right &&
-        event.clientY >= modalRect.top &&
-        event.clientY <= modalRect.bottom;
-      if (!isInsideModal) {
+      if (!modal.contains(event.target)) {
         closeDetail();
       }
     });
     document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape" && !elements.modalOverlay.hidden) {
+      if (elements.modalOverlay.hidden) {
+        return;
+      }
+      if (event.key === "Escape") {
         closeDetail();
+      } else if (event.key === "Tab") {
+        trapFocus(event);
       }
     });
   }
