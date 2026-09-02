@@ -1,0 +1,44 @@
+name: Rebuild GitHub Pages data
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "cases/**/*.json"
+      - "scripts/build_pages_data.py"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-data-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Regenerate docs/data/cases.json
+        run: python scripts/build_pages_data.py
+
+      - name: Commit updated data file
+        run: |
+          if [ -z "$(git status --porcelain -- docs/data/cases.json)" ]; then
+            echo "No changes to docs/data/cases.json"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data/cases.json
+          git commit -m "chore: regenerate docs/data/cases.json"
+          git push
