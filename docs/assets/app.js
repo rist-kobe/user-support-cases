@@ -88,7 +88,7 @@
     tags.forEach(function (tag) {
       var chip = document.createElement("button");
       chip.type = "button";
-      chip.className = "tag-chip" + (selectedSet.has(tag) ? " selected" : "");
+      chip.className = "tag-chip" + (selectedSet.has(tag) ? " selected" : ""); chip.setAttribute("aria-pressed", selectedSet.has(tag) ? "true" : "false");
       chip.textContent = tag;
       chip.addEventListener("click", function () {
         if (selectedSet.has(tag)) {
